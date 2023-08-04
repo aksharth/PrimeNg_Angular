@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+    <span>CATAGORIES</span>
+    <span class="example-spacer"></span>
+
+    <p-button label="ADD CATEGORY" (click)="addcatogory()" styleClass="p-button-raised  p-button-secondary p-button-sm"  [style]="{'width': '150px', 'height': '40px'}" ></p-button>
+    <!-- <button mat-raised-button (click)="openAddEditEmpForm()">
+      ADD CATEGORY
+    </button> -->
+  </mat-toolbar>
+
+<div class="card flex flex-wrap justify-content-center gap-3">
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <!-- <input type="text" pInputText (keyup)="applyFilter($event)" #input /> -->
+        <input class="input" type="text" pInputText #input />
+
+    </span>
+</div>
+
+<div class="content">
+    <h1>Catagories</h1>
+
+    <p-scrollPanel [style]="{ height: '400px','padding-left': '2%' }">
+        <div class="grid">
+          <div *ngFor="let item of products" class="card-container">
+            <p-card>
+              <ng-template pTemplate="content" >
+                <div (click)="gotoproducts(item.id)">
+                  <p>{{ item.name }}</p>
+                </div>
+              </ng-template>
+              <ng-template pTemplate="footer">
+                <div class="card-footer">
+                  <!-- Footer content here -->
+                  <div>
+                    <p-button icon="pi pi-pencil" (click)="editcategory(item.id, item.name)" styleClass="p-button-rounded p-button-secondary p-button-text"  [style]="{'width': '30px', 'height': '30px'}"></p-button>
+                    <p-button icon="pi pi-times" (click)="deletecategory(item.id)" styleClass="p-button-rounded p-button-danger p-button-text" [style]="{'width': '30px', 'height': '30px'}"></p-button>
+                  </div>
+                </div>
+              </ng-template>
+            </p-card>
+          </div>
+        </div>
+      </p-scrollPanel>
+
+</div>
+

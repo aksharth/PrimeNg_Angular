@@ -1,0 +1,47 @@
+{
+  "category": [
+    {
+      "name": "clothes",
+      "id": 2
+    },
+    {
+      "name": "Vegetablesss",
+      "id": 3
+    },
+    {
+      "name": "Bicycle",
+      "id": 5
+    },
+    {
+      "name": "Movies",
+      "id": 6
+    },
+    {
+      "name": "Grocery",
+      "id": 7
+    }
+  ],
+  "product": [
+    {
+      "postId": "2",
+      "name": "T-shirt",
+      "price": 1235,
+      "id": 1
+    },
+    {
+      "postId": "3",
+      "name": "shirt",
+      "price": 345,
+      "id": 3
+    },
+    {
+      "postId": "4",
+      "name": "dfs",
+      "price": 22222222,
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

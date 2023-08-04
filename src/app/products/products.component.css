@@ -1,0 +1,68 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .justify-content-center{
+    align-items:center;
+    margin-top: 1%;
+    margin-right: 10%;
+    border: none;
+  }
+
+  .input{
+    width: 150%;
+  }
+
+  .content{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  
+  ::ng-deep .p-scrollpanel-content {
+    padding: 10px; /* Add some padding for better appearance */
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: start;
+    }
+  /* :host {
+    .p-card {
+      width: 200px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    button {
+      margin-top: 10px;
+    }
+  } */
+  :host {
+  .p-card {
+    background-color: #eff0f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .p-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.312);
+  }
+  .p-button {
+    margin-right: 5px;
+  }
+  .card-footer {
+      text-align: center;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: end;
+      
+    }
+}
