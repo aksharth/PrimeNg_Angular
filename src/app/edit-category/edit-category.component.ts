@@ -25,7 +25,7 @@ export class EditCategoryComponent implements OnInit{
 
     this.routes.queryParams.subscribe((params) => {
       this.id = this.routes.snapshot.params['id'];
-      this.name = params['name'] || '';
+      this.name = params['name'];
       console.log(this.id)
       console.log(this.name)
 

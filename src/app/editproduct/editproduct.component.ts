@@ -11,10 +11,11 @@ import { MessageService } from 'primeng/api';
 })
 export class EditproductComponent implements OnInit{
   form!: FormGroup;
-  id:any;
-  name!:string;
+  Paramid:any;
+  // name!:string;
   price:any;
-
+  postId:any;
+setProduct:any;
   constructor(
     private formBuilder: FormBuilder, 
     private customer:CustomerService,
@@ -23,32 +24,52 @@ export class EditproductComponent implements OnInit{
       private route: Router) {}
 
   ngOnInit() {
-
-    this.routes.queryParams.subscribe((params) => {
-      this.id = this.routes.snapshot.params['id'];
-      this.name = params['name'] || '';
-      // this.price = params['price'] || '';
-
-      console.log(this.id)
-      console.log(this.name)
-      console.log(this.price)
-
-
+    this.routes.params.subscribe((params) => {
+      console.log("1--",params)
+      this.Paramid = this.routes.snapshot.params['id'];
+      console.log("2--",this.Paramid)
+      this.customer.getprod(this.Paramid).subscribe((res: any) => {
+        this.setProduct = res[0];
+        console.log("3---",this.setProduct.name)
+        this.form = this.formBuilder.group({
+          postId: [this.setProduct.postId],
+          // abcname: [this.setProduct.name, Validators.required],
+          name: [this.setProduct.name, Validators.required],
+           price: [this.setProduct.price, Validators.required],
+         });
+      });
     });
     
-    this.form = this.formBuilder.group({
-      name: [this.name, Validators.required],
-      price: [this.price, Validators.required],
+    
+   
+      
+    
 
-    });
   }
+  
+
+  // getProduct(id:any){
+  //   console.log(id)
+  //   this.customer.getprod(id).subscribe((res:any)=>{
+  //   console.log(res[0])
+
+  //   this.setProduct= res[0];
+  //   console.log(this.setProduct.name)
+
+  //   console.log(this.setProduct.name,this.setProduct.price);
+  
+  //     console.log(this.form.value)
+  //   })
+  // }
 
   updateProduct() {
+    console.log("hii",this.form.value, this.Paramid);
+    
 
-    this.customer.editcategory(this.form.value, this.id).subscribe({
+    this.customer.editproduct(this.form.value, this.Paramid, ).subscribe({
       next: (res: any) => {
         alert("Product Updated Successfully!!");
-        this.route.navigate(['/categorys']);
+        this.route.navigate(['/products',this.setProduct.postId]);
       },
       error: () => {
         alert("Error while updating the product!!");

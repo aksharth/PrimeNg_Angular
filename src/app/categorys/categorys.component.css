@@ -9,60 +9,54 @@
     border: none;
   }
 
-  .input{
-    width: 150%;
-  }
 
   .content{
     margin-left: 5%;
     margin-right: 5%;
   }
 
-  
-  ::ng-deep .p-scrollpanel-content {
-    padding: 10px; /* Add some padding for better appearance */
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: start;
-    }
-  /* :host {
-    .p-card {
-      width: 200px;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  
-    button {
-      margin-top: 10px;
-    }
-  } */
-  :host {
-  .p-card {
-    background-color: #eff0f4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* product-list.component.scss */
+/* Styling for the overall container */
 
-    border-radius: 4px;
-    transition: box-shadow 0.3s ease;
+  
+  /* Styling for the table */
+  ::ng-deep .product-table {
+    width: 100%;
   }
   
-  .p-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.312);
+  /* Styling for table rows */
+  ::ng-deep .product-table tbody tr {
+    transition: background-color 0.2s;
+    padding: 10%;
   }
-  .p-button {
+  
+  /* Styling for table rows on hover */
+  ::ng-deep .product-table tbody tr:hover {
+    background-color: #ff0000;
+  }
+  
+  /* Styling for table cells */
+  ::ng-deep .product-table td {
+    padding: 5rem;
+  }
+  
+  /* Styling for buttons */
+  ::ng-deep .p-button-rounded {
+    border-radius: 50%;
     margin-right: 5px;
+    cursor: pointer;
   }
-  .card-footer {
-      text-align: center;
-      border-top: 1px solid #ccc;
-      display: flex;
-      justify-content: end;
-      
-    }
-}
+  
+  ::ng-deep .p-button-secondary {
+    background-color: #4285f4;
+    color: white;
+  }
+  
+  ::ng-deep .p-button-danger {
+    background-color: #ea4335;
+    color: white;
+  }
+  
+
+  
+  

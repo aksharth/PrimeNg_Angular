@@ -1,17 +1,20 @@
 <mat-toolbar color="primary">
-    <span>EDIT CATAGORIES</span>
+    <span>ADD CATEGORIES</span>
     <span class="example-spacer"></span>
   </mat-toolbar>
 
-  <div class="container">
-    <h2>EDIT CATEGORY</h2>
+<div class="container">
+    <h2>ADD CATEGORIES</h2>
     <form [formGroup]="form">
-      <div class="p-field">
-        <label for="name">Name</label>
-        <input id="name" type="text" pInputText formControlName="name" class="p-inputtext" />
-      </div>
-      <button type="submit" (click)="updateProduct()" pButton label="Submit" class="p-button-raised p-button-rounded p-button-secondary"></button>
+        <div class="p-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" pInputText formControlName="name" class="p-inputtext" />
+        </div>
+      
+        <button type="submit" pButton label="Submit" (click)="updateProduct()"
+            class="p-button-raised p-button-rounded p-button-secondary"></button>
     </form>
-  </div>
+</div>
 
   <p-toast position="top-center" key="tl"></p-toast>
+

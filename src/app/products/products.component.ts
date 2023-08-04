@@ -13,32 +13,30 @@ export class ProductsComponent {
   products: any = [];
   virtualProducts!: Product[];
   id:any;
+  postId:any;
+  filterproductbyid:any
   constructor(private customerService: CustomerService, private routes: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
-  this.route.paramMap.subscribe(params => {
-    this.id = params.get('id')
+
+    
+  this.route.params.subscribe(params => {
+    this.id = params['id']
     console.log(this.id)
+    this.customerService.getProductById(this.id).subscribe((res:any)=>{
+      this.products=res;
+      console.log('response', this.products)
+    })
   })
-
-    this.customerService.getproductslist().subscribe(
-     (res:any) => {
-        console.log(res)
-          this.products = res;
-      },
-     (error) => {
-      console.log(error)
-    }
-    );
   }
-
 
   addproducts(){
  this.routes.navigate(['/addproducts', this.id])
   }
 
-  editproduct(){
-    this.routes.navigate(['/editproduct', this.id])
+  editproduct(id:any){
+    console.log(id)
+    this.routes.navigate(['/editproduct', id])
   }
 
   deletecategory(id: any) {
@@ -47,6 +45,7 @@ export class ProductsComponent {
       next: (res: any) => {
         alert("category delete successfully");
         this.products = this.products.filter((catagory: any) => catagory.id !== id);
+        // this.filterproductbyid = this.filterproductbyid.filter((catagory: any) => catagory.id !== id);
       },
       error: () => {
         alert("Error while deleting category");

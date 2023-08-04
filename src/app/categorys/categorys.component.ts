@@ -16,6 +16,7 @@ export class CategorysComponent implements OnInit {
   constructor(private customerService: CustomerService, private routes: Router) {}
 
   ngOnInit() {
+
     this.customerService.getcategorylist().subscribe({
       next: (res:any) => {
         this.products = res;
@@ -52,6 +53,9 @@ export class CategorysComponent implements OnInit {
     })
 
   }
+
+
+
 
 
   }

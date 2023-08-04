@@ -1,44 +1,48 @@
 {
   "category": [
     {
-      "name": "clothes",
-      "id": 2
+      "name": null,
+      "id": 1
     },
     {
-      "name": "Vegetablesss",
+      "name": "mobiles",
       "id": 3
     },
     {
-      "name": "Bicycle",
-      "id": 5
-    },
-    {
-      "name": "Movies",
-      "id": 6
-    },
-    {
-      "name": "Grocery",
-      "id": 7
+      "name": "",
+      "id": 4
     }
   ],
   "product": [
     {
       "postId": "2",
-      "name": "T-shirt",
-      "price": 1235,
+      "name": "BMW FUN",
+      "price": 120,
       "id": 1
     },
     {
-      "postId": "3",
-      "name": "shirt",
-      "price": 345,
+      "postId": "2",
+      "name": "TATA FUN",
+      "price": 67543567,
+      "id": 2
+    },
+    {
+      "categoryID": "1",
+      "name": "TEST12",
+      "price": 3456,
       "id": 3
     },
     {
-      "postId": "4",
-      "name": "dfs",
-      "price": 22222222,
+      "postId": "3",
+      "name": "iphone 13 pro max",
+      "price": 120000,
       "id": 4
+    },
+    {
+      "postId": "3",
+      "name": "samsamdf",
+      "price": 129999,
+      "id": 5
     }
   ],
   "profile": {
