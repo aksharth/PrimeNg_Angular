@@ -8,13 +8,13 @@ import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { EditproductComponent } from './editproduct/editproduct.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'categorys',pathMatch:'full'},
-  {path:'categorys',component:CategorysComponent},
-  {path:'addcategory',component:AddcategoryComponent},
-  {path:'products/:id',component:ProductsComponent},
-  {path:'addproducts/:id',component:AddproductComponent},
-  {path:'editcategories/:id',component:EditCategoryComponent},
-  {path:'editproduct/:id',component:EditproductComponent}
+  {path:'',redirectTo:'categories',pathMatch:'full'},
+  {path:'categories',component:CategorysComponent},
+  {path:'categories/new',component:AddcategoryComponent},
+  {path:'categories/:id/edit',component:EditCategoryComponent},
+  {path:'Products/:id',component:ProductsComponent},
+  {path:'Products/New',component:AddproductComponent},
+  {path:'Products/Edit/:id',component:EditproductComponent}
 
 
 ];

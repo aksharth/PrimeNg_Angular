@@ -25,7 +25,7 @@ export class AddcategoryComponent {
         (res: any) => {
           // Show success message
           this.messageService.add({  key: 'tl', severity: 'success', summary: 'Success', detail: 'Form submitted successfully.' });
-          this.route.navigate(['/categorys'])
+          this.route.navigate(['/categories'])
         },
         (error) => {
           // Show error message

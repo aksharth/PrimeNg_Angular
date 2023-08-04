@@ -1,50 +1,15 @@
 {
   "category": [
     {
-      "name": null,
-      "id": 1
-    },
-    {
-      "name": "mobiles",
-      "id": 3
-    },
-    {
-      "name": "",
-      "id": 4
-    }
-  ],
-  "product": [
-    {
-      "postId": "2",
-      "name": "BMW FUN",
-      "price": 120,
-      "id": 1
-    },
-    {
-      "postId": "2",
-      "name": "TATA FUN",
-      "price": 67543567,
+      "name": "super Cars",
       "id": 2
     },
     {
-      "categoryID": "1",
-      "name": "TEST12",
-      "price": 3456,
+      "name": "Clothes",
       "id": 3
-    },
-    {
-      "postId": "3",
-      "name": "iphone 13 pro max",
-      "price": 120000,
-      "id": 4
-    },
-    {
-      "postId": "3",
-      "name": "samsamdf",
-      "price": 129999,
-      "id": 5
     }
   ],
+  "product": [],
   "profile": {
     "name": "typicode"
   }

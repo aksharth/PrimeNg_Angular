@@ -39,24 +39,37 @@
 <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
-           
+
             <th>Catagories</th>
             <th></th>
             <th></th>
             <th>Edit</th>
             <th>Delete</th>
+            <th>View Products</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
         <tr>
-            <td (click)="gotoproducts(product.id)">{{ product.name }}</td>
+            <td (click)="gotoproducts(product.id)">
+                {{ product.name }}
+            </td>
             <td></td>
             <td></td>
-            <!-- <a [routerLink]="['/products', product.id]"></a> -->
-            <td><p-button icon="pi pi-pencil" (click)="editcategory(product.id,product.name)" styleClass="p-button-rounded p-button-secondary p-button-text"
-                [style]="{'width': '30px', 'height': '30px'}"></p-button></td>
-            <td><p-button icon="pi pi-times" (click)="deletecategory(product.id)" styleClass="p-button-rounded p-button-danger p-button-text"
-                [style]="{'width': '30px', 'height': '30px'}"></p-button></td>
+            <td>
+                <p-button icon="pi pi-pencil" (click)="editcategory(product.id)"
+                    styleClass="p-button-rounded p-button-secondary p-button-text"
+                    [style]="{'width': '30px', 'height': '30px'}"></p-button>
+            </td>
+            <td>
+                <p-button icon="pi pi-times" (click)="deletecategory(product.id)"
+                    styleClass="p-button-rounded p-button-danger p-button-text"
+                    [style]="{'width': '30px', 'height': '30px'}"></p-button>
+            </td>
+            <td>
+                <p-button icon="pi pi-times" (click)="gotoproducts(product.id)"
+                    styleClass="p-button-rounded p-button-danger p-button-text"
+                    [style]="{'width': '30px', 'height': '30px'}"></p-button>
+            </td>
         </tr>
     </ng-template>
 </p-table>

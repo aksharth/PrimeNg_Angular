@@ -13,6 +13,10 @@ export class CustomerService {
   getprod(id:any):Observable<any>{
     return this._http.get(`http://localhost:3001/product?id=${id}`)
   }
+
+  getcategory(id:any):Observable<any>{
+    return this._http.get(`http://localhost:3001/category?id=${id}`)
+  }
   getProductById(id:any) :Observable<any>{
     // return this._http.post('http://localhost:3001/product', data);
     return this._http.get(`http://localhost:3001/product?postId=${id}`)

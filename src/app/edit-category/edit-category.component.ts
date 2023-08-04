@@ -13,6 +13,9 @@ export class EditCategoryComponent implements OnInit{
   form!: FormGroup;
   id:any;
   name!:string;
+  Paramid:any;
+  postId:any;
+  setProduct:any;
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -23,25 +26,36 @@ export class EditCategoryComponent implements OnInit{
 
   ngOnInit() {
 
-    this.routes.queryParams.subscribe((params) => {
-      this.id = this.routes.snapshot.params['id'];
-      this.name = params['name'];
-      console.log(this.id)
-      console.log(this.name)
+    this.routes.params.subscribe((params) => {
+      console.log("1--",params)
+      this.Paramid = this.routes.snapshot.params['id'];
+      console.log("2--",this.Paramid)
+      this.customer.getcategory(this.Paramid).subscribe((res: any) => {
+        this.setProduct = res[0];
+        console.log("3---",this.setProduct.name)
+        this.form = this.formBuilder.group({
+          name: [this.setProduct.name, Validators.required]
+        });
+      });
+    });
 
-    });
+    // this.routes.queryParams.subscribe((params) => {
+    //   this.id = this.routes.snapshot.params['id'];
+    //   this.name = params['name'];
+    //   console.log(this.id)
+    //   console.log(this.name)
+
+    // });
     
-    this.form = this.formBuilder.group({
-      name: [this.name, Validators.required]
-    });
+   
   }
 
   updateProduct() {
 
-    this.customer.editcategory(this.form.value, this.id).subscribe({
+    this.customer.editcategory(this.form.value, this.Paramid).subscribe({
       next: (res: any) => {
         alert("Product Updated Successfully!!");
-        this.route.navigate(['/categorys']);
+        this.route.navigate(['/categories']);
       },
       error: () => {
         alert("Error while updating the product!!");

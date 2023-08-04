@@ -17,8 +17,8 @@ id:any;
   }
   ngOnInit(): void {
     this.initproductform();
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.form.patchValue({ postId: this.id });
+    // this.id = this.route.snapshot.paramMap.get('id');
+    // this.form.patchValue({ postId: this.id });
   }
 
   private initproductform(){

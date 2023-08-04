@@ -31,12 +31,13 @@ export class ProductsComponent {
   }
 
   addproducts(){
- this.routes.navigate(['/addproducts', this.id])
+  
+ this.routes.navigate(['/Products/New'])
   }
 
   editproduct(id:any){
     console.log(id)
-    this.routes.navigate(['/editproduct', id])
+    this.routes.navigate(['/Products/Edit', id])
   }
 
   deletecategory(id: any) {

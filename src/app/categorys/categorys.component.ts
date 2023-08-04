@@ -28,15 +28,15 @@ export class CategorysComponent implements OnInit {
 
 
   addcatogory(){
- this.routes.navigate(['/addcategory'])
+ this.routes.navigate(['/categories/new'])
   }
 
   gotoproducts(id:any){
-    this.routes.navigate(['/products', id]);
+    this.routes.navigate(['/Products', id]);
   }
 
-  editcategory(id:any, name:any){
-    this.routes.navigate(['/editcategories', id],{queryParams:{name}});
+  editcategory(id:any){
+    this.routes.navigate([`/categories/${id}/edit/`]);
 
   }
 
