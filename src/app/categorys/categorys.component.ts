@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../domain/product';
 import { CustomerService } from '../service/customer.service';
 import { Router } from '@angular/router';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class CategorysComponent implements OnInit {
   layout: any = 'list';
   products!: Product[];
   virtualProducts!: Product[];
-  constructor(private customerService: CustomerService, private routes: Router) {}
+  constructor(private customerService: CustomerService, private routes: Router,private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
   ngOnInit() {
 
@@ -41,21 +42,19 @@ export class CategorysComponent implements OnInit {
   }
 
   deletecategory(id: any) {
-
-    this.customerService.deleteEmployee(id).subscribe({
-      next: (res: any) => {
-        alert("category delete successfully");
-        this.products = this.products.filter((catagory: any) => catagory.id !== id);
-      },
-      error: () => {
-        alert("Error while deleting category");
-      }
-    })
-
+    if (window.confirm('Are you sure you want to delete this category?')) {
+      this.customerService.deleteEmployee(id).subscribe({
+        next: (res: any) => {
+          alert("Category deleted successfully");
+         
+          this.products = this.products.filter((category: any) => category.id !== id);
+        },
+        error: () => {
+          alert("Error while deleting category");
+        }
+      });
+    }
   }
-
-
-
 
 
   }

@@ -2,73 +2,44 @@
     <span>CATAGORIES</span>
     <span class="example-spacer"></span>
 
-    <p-button label="ADD CATEGORY" (click)="addcatogory()" styleClass="p-button-raised  p-button-secondary p-button-sm"  [style]="{'width': '150px', 'height': '40px'}" ></p-button>
-    <!-- <button mat-raised-button (click)="openAddEditEmpForm()">
-      ADD CATEGORY
-    </button> -->
+    <p-button label="ADD CATEGORY" (click)="addcatogory()" styleClass="p-button-raised  p-button-help p-button-sm"
+      [style]="{'width': '150px', 'height': '40px'}"></p-button>
   </mat-toolbar>
 
-
-<div class="content">
-
-
-    <!-- <p-scrollPanel [style]="{ height: '400px','padding-left': '2%' }">
-        <div class="grid">
-          <div *ngFor="let item of products" class="card-container">
-            <p-card>
-              <ng-template pTemplate="content" >
-                <div (click)="gotoproducts(item.id)">
-                  <p>{{ item.name }}</p>
-                </div>
-              </ng-template>
-              <ng-template pTemplate="footer">
-                <div class="card-footer">
-   
-                  <div>
-                    <p-button icon="pi pi-pencil" (click)="editcategory(item.id, item.name)" styleClass="p-button-rounded p-button-secondary p-button-text"  [style]="{'width': '30px', 'height': '30px'}"></p-button>
-                    <p-button icon="pi pi-times" (click)="deletecategory(item.id)" styleClass="p-button-rounded p-button-danger p-button-text" [style]="{'width': '30px', 'height': '30px'}"></p-button>
-                  </div>
-                </div>
-              </ng-template>
-            </p-card>
-          </div>
-        </div>
-      </p-scrollPanel> -->
-
-      
-<p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+<div class="content">    
+<p-table [value]="products" [scrollable]="true" scrollHeight="400px" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
-
             <th>Catagories</th>
+            <th></th>
             <th></th>
             <th></th>
             <th>Edit</th>
             <th>Delete</th>
-            <th>View Products</th>
+            <th></th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
+    <ng-template pTemplate="body" let-product >
         <tr>
             <td (click)="gotoproducts(product.id)">
                 {{ product.name }}
             </td>
             <td></td>
             <td></td>
-            <td>
+            <td></td>
+            <td >
                 <p-button icon="pi pi-pencil" (click)="editcategory(product.id)"
                     styleClass="p-button-rounded p-button-secondary p-button-text"
                     [style]="{'width': '30px', 'height': '30px'}"></p-button>
             </td>
             <td>
-                <p-button icon="pi pi-times" (click)="deletecategory(product.id)"
+                <p-button icon="pi pi-trash" (click)="deletecategory(product.id)"
                     styleClass="p-button-rounded p-button-danger p-button-text"
                     [style]="{'width': '30px', 'height': '30px'}"></p-button>
             </td>
             <td>
-                <p-button icon="pi pi-times" (click)="gotoproducts(product.id)"
-                    styleClass="p-button-rounded p-button-danger p-button-text"
-                    [style]="{'width': '30px', 'height': '30px'}"></p-button>
+              <p-button label="VIEW" (click)="gotoproducts(product.id)" styleClass="p-button-rounded p-button-info p-button-sm"
+                [style]="{'width': '150px', 'height': '40px'}"></p-button> 
             </td>
         </tr>
     </ng-template>

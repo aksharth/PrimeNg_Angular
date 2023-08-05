@@ -34,4 +34,8 @@ export class AddcategoryComponent {
       );
     }
   }
+
+  goback(){
+    this.route.navigate(['/categories'])
+  }
 }

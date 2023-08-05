@@ -24,6 +24,8 @@ import { ToastModule } from 'primeng/toast';
 import { ProductsComponent } from './products/products.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { EditproductComponent } from './editproduct/editproduct.component';
+import { ConfirmationService } from 'primeng/api';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
 
 @NgModule({
   declarations: [
@@ -51,12 +53,13 @@ import { EditproductComponent } from './editproduct/editproduct.component';
     ScrollPanelModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastModule
+    ToastModule,
+    ConfirmPopupModule
     
    
   
   ],
-  providers: [MessageService],
+  providers: [MessageService,ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

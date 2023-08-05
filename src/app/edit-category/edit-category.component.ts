@@ -54,11 +54,13 @@ export class EditCategoryComponent implements OnInit{
 
     this.customer.editcategory(this.form.value, this.Paramid).subscribe({
       next: (res: any) => {
-        alert("Product Updated Successfully!!");
+        // alert("Product Updated Successfully!!");
+        this.messageService.add({  key: 'tl', severity: 'success', summary: 'Success', detail: 'Form submitted successfully.' });
         this.route.navigate(['/categories']);
       },
       error: () => {
-        alert("Error while updating the product!!");
+        this.messageService.add({ key: 'tl',severity: 'error', summary: 'Error', detail: 'Failed to submit the form.' });
+        // alert("Error while updating the product!!");
       }
     });
   }

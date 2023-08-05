@@ -13,50 +13,11 @@
   .content{
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 5%;
   }
+  
 
-  /* product-list.component.scss */
-/* Styling for the overall container */
 
-  
-  /* Styling for the table */
-  ::ng-deep .product-table {
-    width: 100%;
-  }
-  
-  /* Styling for table rows */
-  ::ng-deep .product-table tbody tr {
-    transition: background-color 0.2s;
-    padding: 10%;
-  }
-  
-  /* Styling for table rows on hover */
-  ::ng-deep .product-table tbody tr:hover {
-    background-color: #ff0000;
-  }
-  
-  /* Styling for table cells */
-  ::ng-deep .product-table td {
-    padding: 5rem;
-  }
-  
-  /* Styling for buttons */
-  ::ng-deep .p-button-rounded {
-    border-radius: 50%;
-    margin-right: 5px;
-    cursor: pointer;
-  }
-  
-  ::ng-deep .p-button-secondary {
-    background-color: #4285f4;
-    color: white;
-  }
-  
-  ::ng-deep .p-button-danger {
-    background-color: #ea4335;
-    color: white;
-  }
-  
 
   
   

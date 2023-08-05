@@ -5,11 +5,63 @@
       "id": 2
     },
     {
-      "name": "Clothes",
+      "name": "Mobiles",
       "id": 3
+    },
+    {
+      "name": "Bikes",
+      "id": 4
     }
   ],
-  "product": [],
+  "product": [
+    {
+      "postId": "",
+      "name": "iphone 14 pro",
+      "price": 120000,
+      "id": 1
+    },
+    {
+      "postId": "",
+      "name": "iphone 14",
+      "price": 80000,
+      "id": 2
+    },
+    {
+      "name": "iphone 13",
+      "price": 700000,
+      "id": 3
+    },
+    {
+      "postId": "3",
+      "name": "iphone 13 pro max",
+      "price": 60000,
+      "id": 4
+    },
+    {
+      "postId": "3",
+      "name": "samsung s23 ultra",
+      "price": 120000,
+      "id": 5
+    },
+    {
+      "postId": "2",
+      "name": "AUDI FUN",
+      "price": 2000000,
+      "id": 7
+    },
+    {
+      "postId": "4",
+      "name": "Hunter 350",
+      "price": 206000,
+      "id": 8
+    },
+    {
+      "postId": "2",
+      "name": "BMW FUN",
+      "price": 120066,
+      "id": 9
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

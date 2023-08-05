@@ -1,10 +1,11 @@
 <mat-toolbar color="primary">
-    <span>ADD CATEGORIES</span>
+    <!-- <span>EDIT CATEGORIES</span> -->
+    <span  routerLink="/categories"  > <i class="pi pi-angle-left" style="font-size: 1.1rem"></i>Back</span>
     <span class="example-spacer"></span>
   </mat-toolbar>
 
 <div class="container">
-    <h2>ADD CATEGORIES</h2>
+    <h2>EDIT CATEGORIES</h2>
     <form [formGroup]="form">
         <div class="p-field" hidden="true">
             <label for="name">Name</label>
@@ -13,9 +14,14 @@
         <div class="p-field">
             <label for="name">Name</label>
             <input id="name" type="text" pInputText formControlName="name" class="p-inputtext" />
+            <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched" class="p-error">
+                Name is required!
+              </div>
         </div>
-        <button type="submit" pButton label="Submit" (click)="updateProduct()"
+        <button type="submit"  [disabled]="!form.controls['name'].valid" pButton label="Submit" (click)="updateProduct()"
             class="p-button-raised p-button-rounded p-button-secondary"></button>
+      <button type="button" pButton label="cancel"  routerLink="/categories"  class="p-button-raised p-button-rounded p-button-secondary"></button>
+        
     </form>
 </div>
 

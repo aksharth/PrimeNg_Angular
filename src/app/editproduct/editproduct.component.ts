@@ -46,36 +46,25 @@ setProduct:any;
     
 
   }
-  
-
-  // getProduct(id:any){
-  //   console.log(id)
-  //   this.customer.getprod(id).subscribe((res:any)=>{
-  //   console.log(res[0])
-
-  //   this.setProduct= res[0];
-  //   console.log(this.setProduct.name)
-
-  //   console.log(this.setProduct.name,this.setProduct.price);
-  
-  //     console.log(this.form.value)
-  //   })
-  // }
 
   updateProduct() {
     console.log("hii",this.form.value, this.Paramid);
     
-
     this.customer.editproduct(this.form.value, this.Paramid, ).subscribe({
       next: (res: any) => {
         alert("Product Updated Successfully!!");
-        this.route.navigate(['/products',this.setProduct.postId]);
+        this.messageService.add({  key: 'tl', severity: 'success', summary: 'Success', detail: 'Form submitted successfully.' });
+        this.route.navigate(['/Products',this.setProduct.postId]);
       },
       error: () => {
         alert("Error while updating the product!!");
+        this.messageService.add({ key: 'tl',severity: 'error', summary: 'Error', detail: 'Failed to submit the form.' });
       }
     });
   }
 
+  goback(){
+    this.route.navigate(['/Products',this.setProduct.postId]);
+  }
 
 }

@@ -17,8 +17,8 @@ id:any;
   }
   ngOnInit(): void {
     this.initproductform();
-    // this.id = this.route.snapshot.paramMap.get('id');
-    // this.form.patchValue({ postId: this.id });
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.form.patchValue({ postId: this.id });
   }
 
   private initproductform(){
@@ -36,7 +36,7 @@ id:any;
         (res: any) => {
           // Show success message
           this.messageService.add({  key: 'tl', severity: 'success', summary: 'Success', detail: 'Form submitted successfully.' });
-          this.router.navigate(['/products',this.id])
+          this.router.navigate(['/Products',this.id])
         },
         (error) => {
           // Show error message
@@ -44,5 +44,10 @@ id:any;
         }
       );
     }
+  }
+
+
+  goback(){
+    this.router.navigate(['/Products',this.id])
   }
 }

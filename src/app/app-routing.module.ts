@@ -13,8 +13,8 @@ const routes: Routes = [
   {path:'categories/new',component:AddcategoryComponent},
   {path:'categories/:id/edit',component:EditCategoryComponent},
   {path:'Products/:id',component:ProductsComponent},
-  {path:'Products/New',component:AddproductComponent},
-  {path:'Products/Edit/:id',component:EditproductComponent}
+  {path:'Products/:id/New',component:AddproductComponent},
+  {path:'Products/:id/Edit',component:EditproductComponent}
 
 
 ];
