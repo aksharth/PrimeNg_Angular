@@ -7,6 +7,14 @@
     {
       "name": "Mobiles",
       "id": 3
+    },
+    {
+      "name": "bikes",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "id": 5
     }
   ],
   "product": [
@@ -56,6 +64,12 @@
       "name": "BMW FUN",
       "price": 120066,
       "id": 9
+    },
+    {
+      "postId": "5",
+      "name": "kk",
+      "price": 1,
+      "id": 10
     }
   ],
   "profile": {
