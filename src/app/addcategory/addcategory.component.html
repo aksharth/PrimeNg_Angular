@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <!-- <span>ADD CATAGORIES</span> -->
+<span  (click)="goback()"  > <i class="pi pi-angle-left" style="font-size: 1.1rem"></i>Back</span>
+
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+
+  <div class="container">
+    <h2>ADD CATEGORY</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="p-field">
+        <label for="name">Name</label>
+        <input id="name" type="text" pInputText formControlName="name" class="p-inputtext" />
+        <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched" class="p-error">
+          Name is required!
+        </div>
+      </div>
+      <button type="submit" pButton label="Submit"  [disabled]="!form.controls['name'].valid" class="p-button-raised p-button-rounded p-button-secondary"></button>
+      <button type="button" pButton label="cancel" routerLink="/categories" class="p-button-raised p-button-rounded p-button-secondary"></button>
+      
+    </form>
+  </div>
+
+  <p-toast position="top-center" key="tl"></p-toast>

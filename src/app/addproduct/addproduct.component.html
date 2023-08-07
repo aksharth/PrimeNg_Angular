@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <!-- <span>ADD PRODUCTS</span> -->
+    <span (click)="goback()"  > <i class="pi pi-angle-left" style="font-size: 1.1rem"></i>Back</span>
+
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+
+<div class="container">
+    <h2>ADD PRODUCTS</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="p-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" pInputText formControlName="name" class="p-inputtext" />
+            <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched" class="p-error">
+                Name is required!
+              </div>
+        </div>
+        <div class="p-field">
+            <label for="number">Price</label>
+            <input id="number" type="number" pInputText formControlName="price" class="p-inputtext" />
+            <div *ngIf="form.controls['price'].invalid && form.controls['price'].touched" class="p-error">
+                Price is required !
+              </div>
+        </div>
+        
+        <button type="submit" pButton label="Submit"
+            class="p-button-raised p-button-rounded p-button-secondary"  [disabled]="!form.controls['name'].valid || !form.controls['price'].valid"></button>
+      <button type="button" pButton label="cancel" (click)="goback()" class="p-button-raised p-button-rounded p-button-secondary"></button>
+        
+        </form>
+</div>
+
+  <p-toast position="top-center" key="tl"></p-toast>
+

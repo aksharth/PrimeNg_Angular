@@ -1,0 +1,25 @@
+.toolbar{
+  position: fixed;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .justify-content-center{
+    align-items:center;
+    margin-top: 1%;
+    margin-right: 10%;
+    border: none;
+  }
+  
+
+  .input{
+    width: 150%;
+  }
+
+  .content{
+    margin-left: 5%;
+    margin-right: 5%;
+  padding-top: 5%;
+  }
+

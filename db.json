@@ -1,0 +1,78 @@
+{
+  "category": [
+    {
+      "name": "super Cars",
+      "id": 2
+    },
+    {
+      "name": "Mobiles",
+      "id": 3
+    },
+    {
+      "name": "bikes",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "id": 5
+    }
+  ],
+  "product": [
+    {
+      "postId": "",
+      "name": "iphone 14 pro",
+      "price": 120000,
+      "id": 1
+    },
+    {
+      "postId": "",
+      "name": "iphone 14",
+      "price": 80000,
+      "id": 2
+    },
+    {
+      "name": "iphone 13",
+      "price": 700000,
+      "id": 3
+    },
+    {
+      "postId": "3",
+      "name": "iphone 13 pro max",
+      "price": 60000,
+      "id": 4
+    },
+    {
+      "postId": "3",
+      "name": "samsung s23 ultra",
+      "price": 120000,
+      "id": 5
+    },
+    {
+      "postId": "2",
+      "name": "AUDI FUN",
+      "price": 2000000,
+      "id": 7
+    },
+    {
+      "postId": "4",
+      "name": "Hunter 350",
+      "price": 206000,
+      "id": 8
+    },
+    {
+      "postId": "2",
+      "name": "BMW FUN",
+      "price": 120066,
+      "id": 9
+    },
+    {
+      "postId": "5",
+      "name": "kk",
+      "price": 1,
+      "id": 10
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
