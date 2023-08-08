@@ -13,28 +13,11 @@
       "id": 4
     },
     {
-      "name": "abc",
+      "name": "super Bikes",
       "id": 5
     }
   ],
   "product": [
-    {
-      "postId": "",
-      "name": "iphone 14 pro",
-      "price": 120000,
-      "id": 1
-    },
-    {
-      "postId": "",
-      "name": "iphone 14",
-      "price": 80000,
-      "id": 2
-    },
-    {
-      "name": "iphone 13",
-      "price": 700000,
-      "id": 3
-    },
     {
       "postId": "3",
       "name": "iphone 13 pro max",
@@ -67,8 +50,8 @@
     },
     {
       "postId": "5",
-      "name": "kk",
-      "price": 1,
+      "name": "Super Meteor 650",
+      "price": 430000,
       "id": 10
     }
   ],
